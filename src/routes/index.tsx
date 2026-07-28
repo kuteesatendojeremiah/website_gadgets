@@ -15,31 +15,32 @@ import {
   Truck,
   Heart,
 } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 import heroImg from "@/assets/hero-gadgets.jpg";
 import catSmartphones from "@/assets/cat-smartphones.jpg";
 import catAudio from "@/assets/cat-audio.jpg";
 import catSmartwatch from "@/assets/cat-smartwatch.jpg";
 import catAccessories from "@/assets/cat-accessories.jpg";
-import pIphonePro from "@/assets/p-iphone-pro.jpg";
-import pIphoneStandard from "@/assets/p-iphone-standard.jpg";
-import pIphoneSe from "@/assets/p-iphone-se.jpg";
-import pIphone14Pro from "@/assets/p-iphone-14-pro.jpg";
-import pIphone13 from "@/assets/p-iphone-13.jpg";
+import catLaptops from "@/assets/cat-laptops.jpg";
+import catBundles from "@/assets/cat-bundles.jpg";
+import pIphonePink from "@/assets/p-iphone-pro.jpg";
+import pIphoneWhite from "@/assets/p-iphone-standard.jpg";
+import pIphoneGreen from "@/assets/p-iphone-14-pro.jpg";
+import pIphoneDeepBlue from "@/assets/p-iphone-13.jpg";
+import pIphoneNatural from "@/assets/p-iphone-se.jpg";
+import pIphoneLightGreen from "@/assets/p-iphone-light-green.jpg";
+import pIphoneUnboxed from "@/assets/p-iphone-unboxed.jpg";
 import pMacbook from "@/assets/p-macbook.jpg";
-import pLaptop from "@/assets/p-laptop.jpg";
 import pDellXps from "@/assets/p-dell-xps.jpg";
-import pHpSpectre from "@/assets/p-hp-spectre.jpg";
 import pLenovoThinkpad from "@/assets/p-lenovo-thinkpad.jpg";
-import pGamingLaptop from "@/assets/p-gaming-laptop.jpg";
-import pAirpods from "@/assets/p-airpods.jpg";
+import pEarpods from "@/assets/p-airpods.jpg";
 import pAirpodsMax from "@/assets/p-airpods-max.jpg";
-import pAirpods3 from "@/assets/p-airpods-3.jpg";
-import pGalaxyBuds from "@/assets/p-galaxy-buds.jpg";
-import pGalaxyS24Ultra from "@/assets/p-galaxy-s24-ultra.jpg";
+import pAirpods4 from "@/assets/p-airpods-3.jpg";
+import pGalaxySUltra from "@/assets/p-galaxy-s24-ultra.jpg";
 import pGalaxyFold from "@/assets/p-galaxy-fold.jpg";
-import pGalaxyA from "@/assets/p-galaxy-a.jpg";
-import pAppleWatch from "@/assets/p-applewatch.jpg";
-import pIpad from "@/assets/p-ipad.jpg";
+import pBatteryPack from "@/assets/p-battery-pack.jpg";
+import pChargeCable from "@/assets/p-charge-cable.jpg";
+import pSmartwatches from "@/assets/p-applewatch.jpg";
 
 const WHATSAPP_NUMBER = "254754730364";
 const CALL_NUMBER = "0752555017";
@@ -113,16 +114,16 @@ const categories: Category[] = [
     icon: Cable,
   },
   {
-    title: "Laptops & iPads",
-    desc: "MacBooks, ultrabooks, gaming rigs and tablets for work and play.",
-    image: pMacbook,
+    title: "Laptops",
+    desc: "MacBooks, ultrabooks and business laptops for work and play.",
+    image: catLaptops,
     tag: "Power up",
     icon: Laptop,
   },
   {
     title: "Curated Bundles",
     desc: "Hand-picked combos at friendly inquiry prices — just ask.",
-    image: catAccessories,
+    image: catBundles,
     tag: "Ask us",
     icon: Sparkles,
   },
@@ -138,43 +139,55 @@ type Featured = {
 
 const featured: Featured[] = [
   {
-    name: "iPhone 15 Pro Max",
+    name: "iPhone — Pink",
     category: "iPhone",
-    desc: "Titanium design, A17 Pro chip, pro camera system.",
-    image: pIphonePro,
+    desc: "Sleek pink finish with a pro-grade dual camera system.",
+    image: pIphonePink,
     badge: "Flagship",
   },
   {
-    name: "iPhone 15",
+    name: "iPhone — White",
     category: "iPhone",
-    desc: "Everyday iPhone with Dynamic Island and USB-C.",
-    image: pIphoneStandard,
+    desc: "Everyday iPhone with a clean white finish and USB-C.",
+    image: pIphoneWhite,
     badge: "Popular",
   },
   {
-    name: "iPhone 14 Pro",
+    name: "iPhone — Green",
     category: "iPhone",
-    desc: "Deep purple, ProMotion display and 48MP camera.",
-    image: pIphone14Pro,
+    desc: "Fresh green colourway with the latest camera hardware.",
+    image: pIphoneGreen,
   },
   {
-    name: "iPhone 13",
+    name: "iPhone — Deep Blue",
     category: "iPhone",
-    desc: "A15 Bionic, dual cameras and vibrant OLED.",
-    image: pIphone13,
+    desc: "Rich blue finish with a vibrant OLED display.",
+    image: pIphoneDeepBlue,
   },
   {
-    name: "iPhone SE",
+    name: "iPhone — Natural Titanium",
     category: "iPhone",
     desc: "Compact, powerful and wallet-friendly.",
-    image: pIphoneSe,
+    image: pIphoneNatural,
     badge: "Value",
   },
   {
-    name: "Samsung Galaxy S24 Ultra",
+    name: "iPhone — Light Green",
+    category: "iPhone",
+    desc: "Soft green tone with all-day battery life.",
+    image: pIphoneLightGreen,
+  },
+  {
+    name: "iPhone — Sky Blue",
+    category: "iPhone",
+    desc: "Ships boxed with a fast-charge USB-C cable included.",
+    image: pIphoneUnboxed,
+  },
+  {
+    name: "Samsung Galaxy S Ultra",
     category: "Samsung",
-    desc: "200MP camera, S Pen and titanium frame.",
-    image: pGalaxyS24Ultra,
+    desc: "Flagship camera system, S Pen and titanium frame.",
+    image: pGalaxySUltra,
     badge: "Flagship",
   },
   {
@@ -185,13 +198,7 @@ const featured: Featured[] = [
     badge: "Foldable",
   },
   {
-    name: "Samsung Galaxy A Series",
-    category: "Samsung",
-    desc: "Reliable mid-range with great cameras and battery.",
-    image: pGalaxyA,
-  },
-  {
-    name: "MacBook Air / Pro",
+    name: "MacBook Air",
     category: "Laptops",
     desc: "Apple silicon speed with all-day battery.",
     image: pMacbook,
@@ -204,35 +211,22 @@ const featured: Featured[] = [
     image: pDellXps,
   },
   {
-    name: "HP Spectre x360",
-    category: "Laptops",
-    desc: "Convertible 2-in-1 with sleek metal build.",
-    image: pHpSpectre,
-  },
-  {
     name: "Lenovo ThinkPad",
     category: "Laptops",
     desc: "Business-grade reliability and legendary keyboard.",
     image: pLenovoThinkpad,
   },
   {
-    name: "Gaming Laptops",
+    name: "Windows Laptop",
     category: "Laptops",
-    desc: "RGB, high-refresh screens and dedicated GPUs.",
-    image: pGamingLaptop,
-    badge: "Gamer",
+    desc: "Sleek, everyday performer for work and study.",
+    image: catLaptops,
   },
   {
-    name: "Windows Ultrabooks",
-    category: "Laptops",
-    desc: "HP, Dell & Lenovo — sleek performers for work and study.",
-    image: pLaptop,
-  },
-  {
-    name: "AirPods Pro",
+    name: "AirPods 4",
     category: "Audio",
-    desc: "Active noise cancellation and adaptive audio.",
-    image: pAirpods,
+    desc: "The latest generation of AirPods with adaptive audio.",
+    image: pAirpods4,
     badge: "Best seller",
   },
   {
@@ -242,28 +236,34 @@ const featured: Featured[] = [
     image: pAirpodsMax,
   },
   {
-    name: "AirPods (3rd Gen)",
+    name: "EarPods USB-C",
     category: "Audio",
-    desc: "Everyday wireless earbuds with spatial audio.",
-    image: pAirpods3,
+    desc: "Everyday wired earphones with a USB-C connector.",
+    image: pEarpods,
   },
   {
-    name: "Samsung Galaxy Buds",
-    category: "Audio",
-    desc: "Compact wireless earbuds with rich sound.",
-    image: pGalaxyBuds,
+    name: "MagSafe Battery Pack",
+    category: "Accessories",
+    desc: "Magnetic wireless battery pack for on-the-go charging.",
+    image: pBatteryPack,
   },
   {
-    name: "Apple Watch Series",
+    name: "USB-C Charge Cable",
+    category: "Accessories",
+    desc: "60W fast-charge cable, braided and durable.",
+    image: pChargeCable,
+  },
+  {
+    name: "Premium Phone Cases",
+    category: "Accessories",
+    desc: "Leather cases with wristlet in a range of colours.",
+    image: catAccessories,
+  },
+  {
+    name: "Smartwatches",
     category: "Wearables",
-    desc: "Health, fitness and connectivity on your wrist.",
-    image: pAppleWatch,
-  },
-  {
-    name: "iPad",
-    category: "Tablets",
-    desc: "Draw, stream and work — anywhere.",
-    image: pIpad,
+    desc: "Health, fitness and notifications on your wrist.",
+    image: pSmartwatches,
   },
 ];
 
@@ -308,8 +308,8 @@ function Header() {
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-lg">
       <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-4 md:flex md:justify-between">
         <a href="#home" className="flex min-w-0 items-center gap-3">
-          <div className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-gradient-brand shadow-glow">
-            <Heart className="h-5 w-5 text-primary-foreground" fill="currentColor" />
+          <div className="h-11 w-11 shrink-0 overflow-hidden rounded-2xl shadow-glow">
+            <img src={logo} alt="Happy Gadgets" className="h-full w-full object-cover" />
           </div>
           <div className="min-w-0">
             <div className="truncate font-display text-lg font-bold leading-none">Happy Gadgets</div>
@@ -641,8 +641,8 @@ function Footer() {
       <div className="mx-auto grid max-w-7xl gap-8 px-6 py-12 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-3">
-            <div className="grid h-10 w-10 place-items-center rounded-2xl bg-gradient-brand shadow-glow">
-              <Heart className="h-5 w-5 text-primary-foreground" fill="currentColor" />
+            <div className="h-10 w-10 overflow-hidden rounded-2xl shadow-glow">
+              <img src={logo} alt="Happy Gadgets" className="h-full w-full object-cover" />
             </div>
             <div>
               <div className="font-display text-lg font-bold">Happy Gadgets</div>
