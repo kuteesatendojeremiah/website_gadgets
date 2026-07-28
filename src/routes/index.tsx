@@ -139,52 +139,66 @@ type Featured = {
 
 const featured: Featured[] = [
   {
-    name: "iPhone — Pink",
+    name: "iPhone 17 Pro Max",
+    category: "iPhone",
+    desc: "Titanium design, pro camera system and all-day battery.",
+    image: heroImg,
+    badge: "Flagship",
+  },
+  {
+    name: "iPhone 17 Air",
+    category: "iPhone",
+    desc: "Ultra-thin titanium design with all-day battery life.",
+    image: catSmartphones,
+    badge: "New",
+  },
+  {
+    name: "iPhone 13",
     category: "iPhone",
     desc: "Sleek pink finish with a pro-grade dual camera system.",
     image: pIphonePink,
     badge: "Flagship",
   },
   {
-    name: "iPhone — White",
+    name: "iPhone 17 Air",
     category: "iPhone",
     desc: "Everyday iPhone with a clean white finish and USB-C.",
     image: pIphoneWhite,
     badge: "Popular",
   },
   {
-    name: "iPhone — Green",
+    name: "iPhone 17",
     category: "iPhone",
     desc: "Fresh green colourway with the latest camera hardware.",
     image: pIphoneGreen,
   },
   {
-    name: "iPhone — Deep Blue",
+    name: "iPhone 16",
     category: "iPhone",
     desc: "Rich blue finish with a vibrant OLED display.",
     image: pIphoneDeepBlue,
   },
   {
-    name: "iPhone — Natural Titanium",
+    name: "iPhone 17 Pro Max",
     category: "iPhone",
     desc: "Compact, powerful and wallet-friendly.",
     image: pIphoneNatural,
     badge: "Value",
   },
   {
-    name: "iPhone — Light Green",
+    name: "iPhone 15 Plus",
     category: "iPhone",
     desc: "Soft green tone with all-day battery life.",
     image: pIphoneLightGreen,
   },
   {
-    name: "iPhone — Sky Blue",
+    name: "iPhone 15 Plus",
     category: "iPhone",
     desc: "Ships boxed with a fast-charge USB-C cable included.",
     image: pIphoneUnboxed,
   },
   {
-    name: "Samsung Galaxy S Ultra",
+    name: "Samsung Galaxy S26 Ultra",
     category: "Samsung",
     desc: "Flagship camera system, S Pen and titanium frame.",
     image: pGalaxySUltra,
@@ -198,7 +212,7 @@ const featured: Featured[] = [
     badge: "Foldable",
   },
   {
-    name: "MacBook Air",
+    name: "MacBook Neo",
     category: "Laptops",
     desc: "Apple silicon speed with all-day battery.",
     image: pMacbook,
@@ -516,7 +530,7 @@ function FeaturedProducts() {
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {featured.map((p) => (
             <a
-              key={p.name}
+              key={`${p.name}-${p.image}`}
               href={wa(p.name)}
               target="_blank"
               rel="noopener noreferrer"
