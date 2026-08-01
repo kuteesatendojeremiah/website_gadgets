@@ -40,7 +40,6 @@ import pGalaxySUltra from "@/assets/p-galaxy-s24-ultra.jpg";
 import pGalaxyFold from "@/assets/p-galaxy-fold.jpg";
 import pBatteryPack from "@/assets/p-battery-pack.jpg";
 import pChargeCable from "@/assets/p-charge-cable.jpg";
-import pSmartwatches from "@/assets/p-applewatch.jpg";
 
 const WHATSAPP_NUMBER = "254754730364";
 const CALL_NUMBER = "0752555017";
@@ -277,7 +276,7 @@ const featured: Featured[] = [
     name: "Smartwatches",
     category: "Wearables",
     desc: "Health, fitness and notifications on your wrist.",
-    image: pSmartwatches,
+    image: catSmartwatch,
   },
 ];
 
